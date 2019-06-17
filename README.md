@@ -31,10 +31,20 @@ year = {2019}
 
 ### License
 
-Please refer to the LICENSE file for details.
+Please refer to License files for details.
+
+### Notice
+
+* Inside the [FeatureDecoupling](https://github.com/philiptheother/FeatureDecoupling) directory with the downloaded code, the experiments-related data will be stored in the directories [_experiments](https://github.com/philiptheother/FeatureDecoupling/tree/master/_experiments).
+
+* You have to make a copy of the file [config_env_example.py](https://github.com/philiptheother/FeatureDecoupling/blob/master/config_env_example.py) and rename it as *config_env.py*. Set in *config_env.py* the paths to where the caffe directory and datasets reside in your machine. 
+
+### Experiments
+
+* In order to train a FeatureDecoupling model in an unsupervised way with AlexNet-like architecture on the ImageNet training images and then evaluate linear classifiers (for ImageNet and Places205) as well as non-linear classifiers (for ImageNet) on top of the learned features please visit the [pytorch_feature_decoupling](https://github.com/philiptheother/FeatureDecoupling/tree/master/pytorch_feature_decoupling) folder.
 
 ### To do
 
-* Self-supervised training
 * Pytorch-Caffe converter
-* PASCAL VOC expriments
+* PASCAL VOC experiments
+* Pre-trained models
