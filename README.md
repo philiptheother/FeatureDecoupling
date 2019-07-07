@@ -35,13 +35,26 @@ Please refer to License files for details.
 
 ### Notice
 
-* Inside the [FeatureDecoupling](https://github.com/philiptheother/FeatureDecoupling) directory with the downloaded code, the experiments-related data will be stored in the directories [_experiments](https://github.com/philiptheother/FeatureDecoupling/tree/master/_experiments).
+* Inside the [FeatureDecoupling](https://github.com/philiptheother/FeatureDecoupling) directory with the downloaded code, the experiments-related data will be stored in the directories [_experiments](https://github.com/philiptheother/FeatureDecoupling/tree/master/_experiments) and [_experiments_conversion](https://github.com/philiptheother/FeatureDecoupling/tree/master/_experiments_conversion).
 
 * You have to make a copy of the file [config_env_example.py](https://github.com/philiptheother/FeatureDecoupling/blob/master/config_env_example.py) and rename it as *config_env.py*. Set in *config_env.py* the paths to where the caffe directory and datasets reside in your machine. 
 
 ### Experiments
 
 * In order to train a FeatureDecoupling model in an unsupervised way with AlexNet-like architecture on the ImageNet training images and then evaluate linear classifiers (for ImageNet and Places205) as well as non-linear classifiers (for ImageNet) on top of the learned features please visit the [pytorch_feature_decoupling](https://github.com/philiptheother/FeatureDecoupling/tree/master/pytorch_feature_decoupling) folder.
+
+* For PASCAL VOC 2007 detection task please visit the [caffe_voc_detection](https://github.com/philiptheother/FeatureDecoupling/tree/master/caffe_voc_detection) folder.
+
+### Download the already trained FeatureDecoupling model
+
+* In order to download the FeatureDecoupling model (with AlexNet architecture) trained on the ImageNet training set, go to: [ImageNet_Decoupling_AlexNet](https://mega.nz/#!Wmh3WIDZ!e2TgkXEsMMpZNZvb1Tp8HsdBfeZOA3WKn5g0AkXEwAA). Note that:   
+  1. The model is saved in pytorch format.
+  2. It expects RGB images that their pixel values are normalized with the following mean RGB values `mean_rgb = [0.485, 0.456, 0.406]` and std RGB values `std_rgb = [0.229, 0.224, 0.225]`. Prior to normalization the range of the image values must be [0.0, 1.0].
+
+ * In order to download the FeatureDecoupling model (with AlexNet architecture) trained on the ImageNet training set and convered in caffe format for PASCAL VOC 2007 classification and detection, go to: [ImageNet_Decoupling_AlexNet_caffe_cls](https://mega.nz/#!e65D3CLZ!jUvWfBt3NBcjZSI90X5mKKe-OHSswN9nWo_aPo1YCOQ). Note that:   
+   1. The model is saved in caffe format.
+   2. It expects RGB images that their pixel values are normalized with the following mean RGB values `mean_rgb = [0.485, 0.456, 0.406]` and std RGB values `std_rgb = [0.229, 0.224, 0.225]`. Prior to normalization the range of the image values must be [0.0, 1.0].
+   3. The weights of the model are rescaled with the approach of [Kr&auml;henb&uuml;hl et al, ICLR 2016](https://github.com/philkr/magic_init).
 
 ### To do
 
